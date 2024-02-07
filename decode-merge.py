@@ -6,14 +6,12 @@ def merge_files(output_file):
         index = 0
         while True:
             file_name = f'{output_file}_{index}.txt'
-            print(file_name)
             try:
                 with open(file_name, 'r') as in_file:
                     text_data = in_file.read()
                     binary_data = base64.b64decode(text_data.encode('utf-8'))
                     out_file.write(binary_data)
             except:
-                print(index)
                 break
             index += 1
     
