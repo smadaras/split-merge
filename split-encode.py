@@ -16,7 +16,7 @@ def split_file(input_file, chunk_size):
 
 
 if __name__ == "__main__":
-    chunk_size = 1024
+    chunk_size = 1000000
 
     if len(sys.argv) < 2:
         print(f"Use: python split-encode.py input.bin [chunk size]")
